@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta
+            name="description"
+            content="Twin Cities Animal Rescue: explore adoption, fostering, and volunteer opportunities."
+        />
+        <title>Get in touch | Twin Cities Animal Rescue</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600&amp;family=Source+Sans+3:wght@400;600;700&amp;display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <a href="#main">Skip to main content</a>
+        <header>
+            <a href="index.html"
+                ><img
+                    src="assets/images/rescue-logo_c.png"
+                    alt="Twin Cities Animal Rescue"
+                    width="124"
+                    height="114"
+            /></a>
+            <nav aria-label="Main navigation">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Adopt & help</a></li>
+                    <li><a href="about.html">Our story</a></li>
+                    <li>
+                        <a href="contact.html" aria-current="page"
+                            >Get in touch</a
+                        >
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <main id="main" tabindex="-1">
+            <section>
+                <p>Let&#8217;s start a conversation</p>
+                <h1>A small hello.<br />A big possibility.</h1>
+                <p>
+                    Interested in volunteering or fostering? Use the interest
+                    form below to prepare your inquiry.
+                </p>
+            </section>
+            <section aria-labelledby="contact-heading">
+                <div>
+                    <h2 id="contact-heading">Volunteer or Foster Interest</h2>
+                    <p>
+                        Tell us a little about yourself and how you&#8217;d like
+                        to get involved.
+                    </p>
+                    <p id="demo-note">
+                        Classroom demonstration: this form validates your
+                        information locally. It does not send or save your
+                        message.
+                    </p>
+                </div>
+                <dialog open aria-labelledby="interest-heading">
+                    <h2 id="interest-heading">Your Interest Form</h2>
+                    <form
+                        method="dialog"
+                        aria-describedby="demo-note"
+                        id="contact-form"
+                    >
+                        <fieldset>
+                            <legend>Your details</legend>
+                            <label for="name">Full name (required)</label
+                            ><input
+                                type="text"
+                                id="name"
+                                name="name"
+                                autocomplete="name"
+                                required
+                                minlength="2"
+                                maxlength="100"
+                                aria-describedby="name-hint"
+                            /><small id="name-hint"
+                                >Enter 2&#8211;100 characters.</small
+                            ><label for="email">Email address (required)</label
+                            ><input
+                                id="email"
+                                name="email"
+                                type="email"
+                                autocomplete="email"
+                                required
+                                maxlength="254"
+                            /><label for="phone">Phone number (optional)</label
+                            ><input
+                                id="phone"
+                                name="phone"
+                                type="tel"
+                                autocomplete="tel"
+                                inputmode="tel"
+                                placeholder="555-123-4567"
+                                pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                                minlength="12"
+                                maxlength="12"
+                                title="Enter a 10-digit phone number with dashes, such as 555-123-4567."
+                                aria-describedby="phone-hint"
+                            /><small id="phone-hint"
+                                >Optional. Use the format 555-123-4567,
+                                including the dashes.</small
+                            >
+                        </fieldset>
+                        <fieldset>
+                            <legend>Your inquiry</legend>
+                            <label for="interest"
+                                >I&#8217;m interested in (required)</label
+                            ><select id="interest" name="interest" required>
+                                <option value="">Choose a topic</option>
+                                <option value="fostering">Fostering</option>
+                                <option value="volunteering">
+                                    Volunteering
+                                </option>
+                                <option value="donation">
+                                    Donor or community partner inquiry
+                                </option></select
+                            ><label for="message">Message (required)</label
+                            ><textarea
+                                id="message"
+                                name="message"
+                                rows="5"
+                                required
+                                minlength="10"
+                                maxlength="2000"
+                                aria-describedby="message-hint"
+                            ></textarea
+                            ><small id="message-hint"
+                                >Use 10&#8211;2,000 characters to describe your
+                                interests and availability.</small
+                            >
+                        </fieldset>
+                        <button type="submit">
+                            Validate and close demo form
+                        </button>
+                    </form>
+                </dialog>
+                <p>
+                    This HTML-only demo checks the fields and closes the form
+                    when valid. It does not deliver or save an inquiry.
+                    <a href="contact.html">Reload the page to reopen the form</a
+                    >.
+                </p>
+            </section>
+            <section>
+                <h2>Service Area</h2>
+                <p>
+                    For this classroom project, we serve Anaheim, Fullerton,
+                    Orange, Garden Grove, Buena Park, and Santa Ana, with foster
+                    and volunteer opportunities throughout Orange County,
+                    California.
+                </p>
+                <h2>Office Address</h2>
+                <address>
+                    Twin Cities Animal Rescue<br />123 Disneyland Road<br />Anaheim,
+                    CA 92802
+                </address>
+                <h2>Office Hours</h2>
+                <p>
+                    Tuesday&#8211;Friday: 10:00 a.m.&#8211;6:00 p.m.<br />Saturday:
+                    10:00 a.m.&#8211;4:00 p.m.<br />Sunday: noon&#8211;4:00
+                    p.m.<br />Monday: closed.<br />All hours are Pacific Time.
+                    Adoption meetings and foster orientations are by
+                    appointment. The address and office details are fictional
+                    and provided for this classroom project.
+                </p>
+            </section>
+        </main>
+        <footer>
+            <p>Small acts. Second chances.</p>
+            <nav aria-label="Footer navigation">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Adopt &amp; help</a></li>
+                    <li><a href="about.html">Our story</a></li>
+                    <li>
+                        <a href="contact.html">Volunteer or foster interest</a>
+                    </li>
+                </ul>
+            </nav>
+            <p>
+                <small
+                    >&copy; 2026 Twin Cities Animal Rescue. All rights
+                    reserved.</small
+                >
+            </p>
+            <p>Classroom website concept.</p>
+        </footer>
+    </body>
+</html>
