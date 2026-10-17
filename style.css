@@ -3,6 +3,7 @@
     --green: #20634d;
     --cream: #f7f5ec;
     --white: #ffffff;
+    --red: #b3261e;
     --body-font: "Source Sans 3", Arial, sans-serif;
     --heading-font: "Lora", Georgia, serif;
     --space: clamp(1.25rem, 3vw, 2.5rem);
@@ -360,14 +361,17 @@ dialog[open] {
 
 fieldset {
     min-inline-size: 0;
-    margin: 0 0 1.75rem;
-    padding: 1.25rem;
-    border: 1px solid var(--green);
-    border-radius: 0.35rem;
+    margin: 0 0 2rem;
+    padding: 0;
+    border: 0;
 }
 
 legend {
-    padding-inline: 0.5rem;
+    width: 100%;
+    padding: 0 0 0.5rem;
+    border-bottom: 2px solid var(--cream);
+    font-family: var(--heading-font);
+    font-size: 1.25rem;
     font-weight: 700;
 }
 
@@ -385,11 +389,17 @@ textarea {
     width: 100%;
     min-height: 44px;
     padding: 0.75rem;
-    border: 1px solid var(--green);
-    border-radius: 0.25rem;
-    background: var(--white);
+    border: 2px solid var(--green);
+    border-radius: 0.35rem;
+    background: var(--cream);
     color: var(--ink);
     font: inherit;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    background: var(--white);
 }
 
 textarea {
@@ -403,10 +413,38 @@ small {
     font-size: 0.875rem;
 }
 
+[data-role] {
+    display: block;
+    margin-block: 0.75rem 1rem;
+}
+
+button[aria-pressed="true"] {
+    background: var(--white);
+    color: var(--green);
+}
+
+.error {
+    margin: 0.4rem 0 0;
+    font-weight: 700;
+    color: var(--red);
+}
+
+.error:empty {
+    display: none;
+}
+
+[aria-invalid="true"] {
+    border: 3px solid var(--red);
+}
+
 #demo-note {
     padding: 1rem;
     background: var(--white);
     border-inline-start: 4px solid var(--green);
+}
+
+#demo-note:empty {
+    display: none;
 }
 
 body > footer {
@@ -479,10 +517,6 @@ footer :focus-visible {
     article {
         flex-basis: 100%;
         padding: 1.25rem;
-    }
-
-    fieldset {
-        padding: 0.75rem;
     }
 
     dialog[open] {

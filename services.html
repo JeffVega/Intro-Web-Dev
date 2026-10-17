@@ -15,6 +15,7 @@
             rel="stylesheet"
         />
         <link rel="stylesheet" href="style.css" />
+        <script src="script.js" defer></script>
     </head>
     <body>
         <a href="#main">Skip to main content</a>
@@ -92,6 +93,9 @@
                         veterinary care, and weekly check-ins; fosters provide
                         daily care and updates.
                     </p>
+                    <button type="button" data-role="fostering">
+                        Save interest: Fostering
+                    </button>
                     <a href="contact.html">Ask about fostering</a>
                 </article>
                 <article id="volunteer">
@@ -107,14 +111,23 @@
                         <li>
                             Animal care: help with feeding, cleaning, and daily
                             comfort under team guidance.
+                            <button type="button" data-role="animal-care">
+                                Save interest: Animal care
+                            </button>
                         </li>
                         <li>
                             Socialization: spend supervised time helping animals
                             feel comfortable around people.
+                            <button type="button" data-role="socialization">
+                                Save interest: Socialization
+                            </button>
                         </li>
                         <li>
                             Community outreach: help share rescue information
                             and support awareness activities.
+                            <button type="button" data-role="outreach">
+                                Save interest: Community outreach
+                            </button>
                         </li>
                     </ul>
                     <p>
@@ -128,6 +141,17 @@
                     </p>
                     <a href="contact.html">Ask about volunteering</a>
                 </article>
+            </section>
+            <section aria-labelledby="saved-heading">
+                <h2 id="saved-heading">Your saved interests</h2>
+                <p>
+                    Save the roles that interest you, and we&#8217;ll fill them
+                    in on the interest form for you.
+                </p>
+                <ul id="saved-list" aria-live="polite">
+                    <li>No interests saved yet.</li>
+                </ul>
+                <a href="contact.html">Continue to the interest form</a>
             </section>
         </main>
         <footer>
