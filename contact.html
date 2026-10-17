@@ -15,6 +15,7 @@
             rel="stylesheet"
         />
         <link rel="stylesheet" href="style.css" />
+        <script src="script.js" defer></script>
     </head>
     <body>
         <a href="#main">Skip to main content</a>
@@ -55,17 +56,12 @@
                         Tell us a little about yourself and how you&#8217;d like
                         to get involved.
                     </p>
-                    <p id="demo-note">
-                        Classroom demonstration: this form validates your
-                        information locally. It does not send or save your
-                        message.
-                    </p>
+                    <p id="demo-note" aria-live="polite"></p>
                 </div>
                 <dialog open aria-labelledby="interest-heading">
                     <h2 id="interest-heading">Your Interest Form</h2>
                     <form
                         method="dialog"
-                        aria-describedby="demo-note"
                         id="contact-form"
                     >
                         <fieldset>
@@ -79,10 +75,12 @@
                                 required
                                 minlength="2"
                                 maxlength="100"
-                                aria-describedby="name-hint"
+                                aria-describedby="name-hint name-error"
                             /><small id="name-hint"
                                 >Enter 2&#8211;100 characters.</small
-                            ><label for="email">Email address (required)</label
+                            >
+                            <p class="error" id="name-error"></p>
+                            <label for="email">Email address (required)</label
                             ><input
                                 id="email"
                                 name="email"
@@ -90,7 +88,10 @@
                                 autocomplete="email"
                                 required
                                 maxlength="254"
-                            /><label for="phone">Phone number (optional)</label
+                                aria-describedby="email-error"
+                            />
+                            <p class="error" id="email-error"></p>
+                            <label for="phone">Phone number (optional)</label
                             ><input
                                 id="phone"
                                 name="phone"
@@ -100,19 +101,24 @@
                                 placeholder="555-123-4567"
                                 pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
                                 minlength="12"
-                                maxlength="12"
                                 title="Enter a 10-digit phone number with dashes, such as 555-123-4567."
-                                aria-describedby="phone-hint"
+                                aria-describedby="phone-hint phone-error"
                             /><small id="phone-hint"
-                                >Optional. Use the format 555-123-4567,
-                                including the dashes.</small
+                                >Optional. Type your 10-digit number and the
+                                dashes are added for you.</small
                             >
+                            <p class="error" id="phone-error"></p>
                         </fieldset>
                         <fieldset>
                             <legend>Your inquiry</legend>
                             <label for="interest"
                                 >I&#8217;m interested in (required)</label
-                            ><select id="interest" name="interest" required>
+                            ><select
+                                id="interest"
+                                name="interest"
+                                required
+                                aria-describedby="interest-error"
+                            >
                                 <option value="">Choose a topic</option>
                                 <option value="fostering">Fostering</option>
                                 <option value="volunteering">
@@ -121,7 +127,9 @@
                                 <option value="donation">
                                     Donor or community partner inquiry
                                 </option></select
-                            ><label for="message">Message (required)</label
+                            >
+                            <p class="error" id="interest-error"></p>
+                            <label for="message">Message (required)</label
                             ><textarea
                                 id="message"
                                 name="message"
@@ -129,21 +137,20 @@
                                 required
                                 minlength="10"
                                 maxlength="2000"
-                                aria-describedby="message-hint"
+                                aria-describedby="message-hint message-error"
                             ></textarea
                             ><small id="message-hint"
                                 >Use 10&#8211;2,000 characters to describe your
                                 interests and availability.</small
                             >
+                            <p class="error" id="message-error"></p>
                         </fieldset>
                         <button type="submit">
-                            Validate and close demo form
+                            Submit
                         </button>
                     </form>
                 </dialog>
                 <p>
-                    This HTML-only demo checks the fields and closes the form
-                    when valid. It does not deliver or save an inquiry.
                     <a href="contact.html">Reload the page to reopen the form</a
                     >.
                 </p>
